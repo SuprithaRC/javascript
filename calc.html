@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <style>
+                table,td,th
+                {
+                    border: 1px solid black;
+                    width: 40%;
+                    text-align:center;
+                }
+            </style>
+             <script>
+                 function calc(click_id)
+            {
+                let val1=parseFloat(document.getElementById("value1").value);
+                let val2=parseFloat(document.getElementById("value2").value);
+                if(isNaN(val1) || isNaN(val2))
+                    alert("Enter valid number");
+                else if(click_id=="b1")
+                    document.getElementById("ans").value=val1+val2;
+                else if(click_id=="b2")
+                    document.getElementById("ans").value=val1-val2;
+                else if(click_id=="b3")
+                    document.getElementById("ans").value=val1*val2;
+                else if(click_id=="b4")
+                    document.getElementById("ans").value=val1/val2;
+            }
+            </script>
+        </head>
+        <body>
+            <table> 
+                <caption>Calulator</caption>
+                <tr>
+                    <td>Value1:</td><td><input type="text" id="value1"/></td>
+                    <td>Value2:</td><td><input type="text" id="value2"/></td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="Add" id="b1" onclick="calc(this.id)"></td>
+                    <td> <input type="button"  value="Sub" id="b2" onclick="calc(this.id)"></td>
+                    <td> <input type="button"  value="Mul" id="b3" onclick="calc(this.id)"></td>
+                    <td> <input type="button"  value="Div" id="b4" onclick="calc(this.id)"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">Answer:<input type="text" id="ans" value=""></td>
+                </tr>
+            </table>
+        </body>
+    </html>
+</!DOCTYPE>
